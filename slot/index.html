@@ -176,8 +176,6 @@
             width: auto !important;
             max-width: 100% !important;
             border-radius: 50px !important;
-            box-shadow: 0px 0px 10px rgba(86, 86, 86, 0.324),
-                    0px 0px 30px rgba(173, 216, 230, 0.6);
         }
         }
         .game-info {
@@ -195,25 +193,14 @@
             padding: 12px 24px;
             width: 130px;
             border-radius: 25px;
-            background: linear-gradient(145deg, #006eff 0%, #58deffb9 100%);
-            box-shadow: 0 6px #006eff, 0 -6px #58deffb9 inset;
-            color: white;
+            background: linear-gradient(145deg, #ff0000 0%, #ff0000b9 100%);
+            color: rgb(255, 255, 255);
             cursor: pointer;
             transition: all 0.2s ease;
             outline: none;
             font-family: 'LuckiestGuy-Regular', cursive, sans-serif;
         }
 
-        .game button:hover {
-            background: linear-gradient(145deg, #006eff 0%, #58deffb9 100%);
-            box-shadow: 0 8px #006eff, 0 -6px #58deffb9 inset;
-            transform: translateY(-3px);
-        }
-
-        .game button:active {
-            box-shadow: 0 3px #006eff, 0 -3px #58deffb9 inset;
-            transform: translateY(2px);
-        }
         canvas#particleCanvas {
             position: fixed; /* Фиксируем канвас на фоне */
             top: 0;
@@ -982,6 +969,25 @@
     .lckyguy{
     font-family: 'LuckiestGuy-Regular', cursive, sans-serif;
 }
+.btnf{
+    position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #ff0000 0%, #ff0000 100%);
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font: bold;
+        font-weight: 500;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 65, 178, 0.3);
+}
     
     .back-button:hover::before {
         left: 100%;
@@ -1001,6 +1007,10 @@
         font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+.gamee{
+
 }
   </style>
 </head>
@@ -1065,12 +1075,9 @@
                 <button onclick="openGame('sugar')">Открыть</button>
             </div>
         </div>
-        <div class="game">
-            <div class="game-info">
-                <h3></h3>
-                <button onclick="openGame('backk')">Назад</button>
-            </div>
-        </div>
+        <div class="game" style="display: flex; justify-content: center; color: red;" >
+    <button class="btnf" onclick="openGame('backk')">Назад</button>
+</div>
     </div>
 </div>
 
