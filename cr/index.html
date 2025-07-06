@@ -703,7 +703,7 @@
         justify-content: center;
         gap: 8px;
         padding: 12px 24px;
-        background: linear-gradient(135deg, #ff0000 0%, #ff0000 100%);
+        background: linear-gradient(135deg, #4a6bff 0%, #2541b2 100%);
         color: white;
         border: none;
         border-radius: 50px;
@@ -746,13 +746,39 @@
     .back-button:hover .back-icon {
         transform: translateX(-3px);
     }
+
+    .winners-rectangle {
+        margin-top: 15px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    .back-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .back-button svg {
+        width: 10px;
+        height: 10px;
+        margin-right: 4px;
+    }
+    .back-button:hover {
+        background: #e0e0e0; /* Эффект при наведении */
+    }
   </style>
 </head>
 <body>
   <!-- Звездный фон -->
   <div class="stars" id="stars"></div>
 
-  <button 
+<div style="display: flex; justify-content: center; width: 100%;">
+    <button 
         class="back-button" 
         onclick="openGame('back')"
         style="
@@ -776,7 +802,8 @@
             <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
         </svg>
         Назад
-
+    </button>
+</div>
 
 
 
@@ -1711,7 +1738,7 @@ function openGame(game) {
             other: 'jet/index.html'
         },
         back: {
-            ios: '../index.html',
+            ios: '..index.html',
             other: '../index.html'
         },
         avia: {
